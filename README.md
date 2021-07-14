@@ -1,4 +1,7 @@
 # PythonProjects
-- ## whisky-store-scraper.py
-      Um script que obtem informações de uma loja de whisky online e escreve os dados em um arquivo .txt
-      Para o script rodar precisa-se deuma instalação de Python com as bibliotecas **requests**, **BeautifulSoup** e **pandas**.
+Repository for my personal Python projects.
+
+  ## whisky-store-scraper.py
+  A script that gathers information from an online whisky store and writes it (formatted like a table) in a .txt file.
+  
+  Requires **requests**, **BeautifulSoup**, and **pandas** installed.
