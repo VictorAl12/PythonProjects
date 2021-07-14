@@ -1,4 +1,4 @@
-# PythonProjects
+# Python projects
 Repository for my personal Python projects.
 
   ## whisky-store-scraper.py
