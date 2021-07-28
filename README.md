@@ -8,4 +8,5 @@ Repository for my personal Python projects.
   
   ## books_scraper.py
   A script that gathers information from a simulated bookstore and prints it to the console as JSON instances.
+  
   Requires `requests` and `BeautifulSoup` installed
