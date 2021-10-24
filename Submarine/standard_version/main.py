@@ -79,18 +79,16 @@ as the cardinal direction that its facing.\n
         break
     
     if(default == 'Y'):
-        x = 0
-        y = 0
-        z = 0
-        direction = 0
+        # instancing object
+        sub = Submarine()
     else:
         x = x_input()
         y = y_input()
         z = z_input()
         direction = direction_input()
 
-    # stancing object
-    sub = Submarine(x, y, z, direction)
+        # instancing object
+        sub = Submarine(x, y, z, direction)
 
     # command
     print('''\nInsert the submarine's movement orders (e.g. "LMRDDMMUU") 
