@@ -10,3 +10,6 @@ Repository for my personal Python projects.
   A script that gathers information from a simulated bookstore and prints it to the console as JSON instances.
   
   Requires `requests` and `BeautifulSoup` installed
+  
+  ## Submarine
+  An [OOP](https://en.wikipedia.org/wiki/Object-oriented_programming) practice project that simulates a submarine movement in a three-dimensional plane (x, y, z). Also had a bit of a [TDD](https://en.wikipedia.org/wiki/Test-driven_development) practice. [Idea origin (Brazilian Portuguese).](https://github.com/flaviomicheletti/submarino-da-buscape)
