@@ -12,4 +12,6 @@ Repository for my personal Python projects.
   Requires `requests` and `BeautifulSoup` installed
   
   ## Submarine
-  An [OOP](https://en.wikipedia.org/wiki/Object-oriented_programming) practice project that simulates a submarine movement in a three-dimensional plane (x, y, z). Also had a bit of a [TDD](https://en.wikipedia.org/wiki/Test-driven_development) practice. [Idea origin (Brazilian Portuguese).](https://github.com/flaviomicheletti/submarino-da-buscape)
+  An [OOP](https://en.wikipedia.org/wiki/Object-oriented_programming) practice project that simulates a submarine movement in a three-dimensional plane (x, y, z). Also had a bit of a [TDD](https://en.wikipedia.org/wiki/Test-driven_development) practice. [Original idea (Brazilian Portuguese).](https://github.com/flaviomicheletti/submarino-da-buscape)
+  - Standard version: Made with basic OOP.
+  - Dataclass version: Same project but made with the [dataclass python module.](https://docs.python.org/3/library/dataclasses.html)
