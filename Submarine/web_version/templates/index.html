@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+    <body>
+        <h1>Submarine Command</h1>
+        <h3>Enter the submarine's starting position</h3>
+        <label>X:</label>
+        <input type="number" value="0" id='x' required>
+        <br>
+        <label>Y:</label>
+        <input type="number" value="0" id='y' required>
+        <br>
+        <label>Z:</label>
+        <input type="number" value="0" id='z' required>
+        <br>
+        <label>Direction:</label>
+        <input type="text" value="North" id='direction' required>
+        <br>
+        <br>
+        <h3>Enter the submarine's orders (e.g. LMRDDMMUU)</h3>
+        <div>
+            <p>L = Turn Left</p>
+            <p>R = Turn Right</p>
+            <p>U = Go Up</p>
+            <p>D = Go Down</p>
+            <p>M = Move Forward</p>
+        </div>
+        <br>
+        <label>Orders:</label>
+        <input type="text" value="LMRDDMMUU" id="orders" required>
+        <br>
+        <button type="submit" onclick="submit()">Submit</button>
+        <p style="display: none; color: darkblue;" id="result">You can't see me</p>
+    </body>
+
+    <script>
+        function submit() {
+            var x = document.getElementById("x").value
+            var y = document.getElementById("y").value
+            var z = document.getElementById("z").value
+            var direction = document.getElementById("direction").value
+            var orders = document.getElementById("orders").value
+
+            var json = {
+                'x': x,
+                'y': y,
+                'z': z,
+                'direction': direction,
+                'orders': orders
+            }
+
+            fetch('http://127.0.0.1:5000/order-sub',
+            {
+                headers: {
+                    'Accept': 'application/json',
+                    'Content-Type': 'application/json',
+                    'Access-Control-Allow-Origin': '*'
+                },
+                method: "POST",
+                body: JSON.stringify(json)
+            })
+            .then(function(res){ 
+                res.json()
+                    .then(data => {
+                        console.log(data)
+                        var result = document.getElementById("result")
+                        result.style.display = "block"
+                        result.innerHTML = `Current location: ${data.result}`
+                    })
+            })
+            .catch(function(res){ console.log(res) })
+        }
+    </script>
+</html>
